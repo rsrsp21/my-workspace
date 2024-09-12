@@ -1,0 +1,10 @@
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> 
+<h1 class="text-2xl font-bold mb-4">Exercise 6(a): Passing data from Container Component to Child Component</h1> <!-- Main heading for the exercise -->
+<p class="mb-4 text-center w-3/4 mx-auto"><b>Problem Statement: </b>Create an AppComponent that displays a dropdown with a list of courses as values in it. Create another component called the CoursesList component and load it in AppComponent which should display the course details. When the user selects a course from the dropdown, the selected course's details should be passed from the AppComponent (the container component) to the CoursesList component (the child component) and displayed within the CoursesList component.</p> <!-- Problem statement description -->
+<div class="p-6">
+  <h1 class="text-lg font-semibold">Select a Course:</h1>
+  <select (change)="onCourseChange($event)" class="mt-2 border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:bg-gray-100"> <!-- Dropdown for course selection with hover effect -->
+    <option *ngFor="let course of courses" [value]="course.id">{{ course.name }}</option>
+  </select>
+</div>
+<app-courses-list [course]="selectedCourse"></app-courses-list>

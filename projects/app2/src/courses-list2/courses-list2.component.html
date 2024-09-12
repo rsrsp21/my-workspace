@@ -1,0 +1,25 @@
+<table>
+    <thead>
+      <tr>
+        <th>Course Name</th>
+        <th>Instructor</th>
+        <th>Duration (Hrs)</th>
+        <th>Level</th>
+        <th>Prerequisites</th>
+        <th>Rating</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let course of courses">
+        <td>{{ course.name }}</td>
+        <td>{{ course.instructor }}</td>
+        <td>{{ course.duration }}</td>
+        <td>{{ course.level }}</td>
+        <td>{{ course.prerequisites }}</td>
+        <td>{{ course.rating }}</td>
+        <td><button (click)="onRegister(course)">Register</button></td>
+      </tr>
+    </tbody>
+  </table>
+  

@@ -1,0 +1,12 @@
+<div>
+  <h1>Course Registration</h1>
+  <app-courses-list2 (register)="handleRegistration($event)"></app-courses-list2>
+  
+  <div class="reg_cour" *ngIf="registeredCourses.length > 0">
+    <h2>Registered Courses</h2>
+    <ul>
+      <li *ngFor="let course of registeredCourses">{{ course.name }}</li>
+    </ul>
+  </div>
+</div>
+

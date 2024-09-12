@@ -1,0 +1,15 @@
+.typing-container {
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .typing-text {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    animation: blink-caret .75s step-end infinite;
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+  }

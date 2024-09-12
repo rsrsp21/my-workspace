@@ -1,0 +1,10 @@
+<h2>Exercise 6(d): Component Life Cycle</h2>
+<p style="font-size: 16px; color: black"><b>Problem Statement:</b> Override component life-cycle hooks and logging the corresponding messages to understand the flow.</p>
+<input [(ngModel)]="inputData" placeholder="Update inputData">
+<p>Check the console to see lifecycle hooks in action.</p>
+<button (click)="toggleChildComponent()">
+  Toggle Child Component
+</button>
+<p *ngIf="showChildComponent">
+  <app-child></app-child>
+</p>

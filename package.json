@@ -3,7 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start:landing-page": "cd projects/landing-page && ng serve --port 4200",
+    "start:app1": "cd projects/app1 && ng serve --port 4300",
+    "start:app2": "cd projects/app2 && ng serve --port 4400",
+    "start:app3": "cd projects/app3 && ng serve --port 4600",
+    "start:app4": "cd projects/app4 && ng serve --port 4500",
+    "start": "concurrently \"npm run start:landing-page\" \"npm run start:app1\" \"npm run start:app2\" \"npm run start:app3\" \"npm run start:app4\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -23,9 +28,11 @@
     "zone.js": "~0.14.10"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^18.2.3",
     "@angular/cli": "^18.2.3",
     "@angular/compiler-cli": "^18.2.0",
     "@types/jasmine": "~5.1.0",
+    "concurrently": "^8.2.2",
     "jasmine-core": "~5.2.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

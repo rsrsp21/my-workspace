@@ -1,0 +1,16 @@
+/* app.component.css */
+h1 {
+    text-align: center;
+    color: black;
+    margin-top: 20px;
+  }
+h2 {
+    margin-left: 20px;
+    padding-top: 20px;
+}
+p {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px auto;
+    color: #555;
+  }
